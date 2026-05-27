@@ -1,0 +1,8 @@
+<h2>Lista Tornei</h2>
+
+<div class="tournament-card" *ngFor="let t of tournaments">
+  <h3>{{t.title}}</h3>
+  <p>Gioco: {{t.game.title}}</p>
+  <p>Data: {{t.date}}</p>
+  <p>Status: {{ t.status }}</p>
+</div>

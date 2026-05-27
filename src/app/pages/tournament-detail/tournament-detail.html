@@ -1,0 +1,11 @@
+<div *ngIf="tournament">
+  <h2>{{ tournament.name }}</h2>
+  <p>{{ tournament.description }}</p>
+
+  <h3>Partecipanti</h3>
+  <ul>
+    <li *ngFor="let p of tournament.players">
+      {{ p.username }}
+    </li>
+  </ul>
+</div>
