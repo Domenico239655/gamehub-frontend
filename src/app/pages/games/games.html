@@ -1,0 +1,23 @@
+<h2>Libreria Giochi</h2>
+
+<div class="games-grid">
+  
+  @for (game of games; track game.id) {
+    <div class="game-card">
+      <img class="cover-image" [src]="game.coverUrl" alt="Cover del gioco">
+      
+      <div class="game-info">
+        <h3>{{ game.title }}</h3>
+        <p class="genre">{{ game.genere || 'Genere non specificato' }}</p>
+        
+        <div class="rating-section">
+          <span class="rating-label">Valutazione RAWG:</span>
+          <span class="stars">{{ game.rating }} ⭐</span>
+        </div>
+      </div>
+    </div>
+  } @empty {
+    <p class="loading-text">Nessun gioco presente o caricamento in corso...</p>
+  }
+
+</div>

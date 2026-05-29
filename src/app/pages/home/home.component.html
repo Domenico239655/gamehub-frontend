@@ -1,0 +1,62 @@
+<div class="home-container">
+
+  
+
+   <section class="carousel-section">
+    <h1>Competi. Vinci. Scala la classifica.</h1>
+      <h2>GIOCHI IN EVIDENZA</h2>
+    <div class="carousel-container" #carousel>
+      @for(game of carouselGames; track game.title){
+        <div class="carousel-item">
+          <img [src]="game.image" [alt] ="game.title">
+          <div class="carousel-caption">{{game.title}}</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="hero">
+      <div class="hero-buttons">
+          <button class="btn-primary">CREA TORNEO</button>
+          <button class="btn-secondary">ESPLORA GIOCHI</button>
+      </div>
+  </section>
+
+ 
+
+  <section class="grid-section">
+
+      <div class="card">
+        <h2>TOP PLAYERS</h2>
+        <ul>
+          <li>#1 Marco – 2500 ELO</li>
+          <li>#2 Luca – 2300 ELO</li>
+          <li>#3 Simone – 2200 ELO</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>TORNEI LIVE</h2>
+        <ul>
+          <li>FIFA CUP</li>
+          <li>LoL Arena</li>
+          <li>Fortnite Night</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>TOP GAMES</h2>
+        <ul>
+          <li>Valorant</li>
+          <li>CS2</li>
+          <li>Minecraft</li>
+        </ul>
+      </div>
+
+  </section>
+
+  <footer>
+      © 2026 GameHub Arena – Tutti i diritti riservati
+  </footer>
+
+</div>
