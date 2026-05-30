@@ -44,16 +44,16 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem(this.TOKEN_KEY);
-    localStorage.removeItem(this.USER_KEY);
+    sessionStorage.removeItem(this.TOKEN_KEY);
+    sessionStorage.removeItem(this.USER_KEY);
   }
 
   getToken(): string | null {
-    return localStorage.getItem(this.TOKEN_KEY);
+    return sessionStorage.getItem(this.TOKEN_KEY);
   }
 
   getCurrentUser(): AuthResponse | null {
-    const raw = localStorage.getItem(this.USER_KEY);
+    const raw = sessionStorage.getItem(this.USER_KEY);
     return raw ? JSON.parse(raw) : null;
   }
 
@@ -62,7 +62,7 @@ export class AuthService {
   }
 
   private saveSession(res: AuthResponse): void {
-    localStorage.setItem(this.TOKEN_KEY, res.token);
-    localStorage.setItem(this.USER_KEY, JSON.stringify(res));
+    sessionStorage.setItem(this.TOKEN_KEY, res.token);
+    sessionStorage.setItem(this.USER_KEY, JSON.stringify(res));
   }
 }
