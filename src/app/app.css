@@ -54,3 +54,30 @@
   color: white;
   box-shadow: 0 0 10px #6a5acd;
 }
+
+.username-label {
+  color: #9b8cff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #e05555;
+  color: #e05555;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.logout-btn:hover {
+  background: #e05555;
+  color: white;
+  box-shadow: 0 0 10px rgba(224, 85, 85, 0.5);
+}
